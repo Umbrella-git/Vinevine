@@ -6,25 +6,25 @@
       :infinite-scroll-disabled="disabled"
     >
       <li class="list-item">
-        <ImgComputed :style="2" :imgList="imagesRef.slice(0, 2)" />
+        <ImgComputed :style="2" :imgList="imgList.slice(0, 2)" />
       </li>
       <li class="list-item">
-        <ImgComputed :style="4" :imgList="imagesRef.slice(2, 6)" />
+        <ImgComputed :style="4" :imgList="imgList.slice(2, 6)" />
       </li>
       <li class="list-item">
-        <ImgComputed :style="2" :imgList="imagesRef.slice(6, 8)" />
+        <ImgComputed :style="2" :imgList="imgList.slice(6, 8)" />
       </li>
       <li class="list-item">
-        <ImgComputed :style="2" :imgList="imagesRef.slice(8, 10)" />
+        <ImgComputed :style="2" :imgList="imgList.slice(8, 10)" />
       </li>
       <li class="list-item">
-        <ImgComputed :style="4" :imgList="imagesRef.slice(10, 14)" />
+        <ImgComputed :style="4" :imgList="imgList.slice(10, 14)" />
       </li>
       <li class="list-item">
-        <ImgComputed :style="2" :imgList="imagesRef.slice(14, 16)" />
+        <ImgComputed :style="2" :imgList="imgList.slice(14, 16)" />
       </li>
       <li class="list-item">
-        <ImgComputed :style="2" :imgList="imagesRef.slice(16, 18)" />
+        <ImgComputed :style="2" :imgList="imgList.slice(16, 18)" />
       </li>
     </ul>
     <p v-if="loading">Loading...</p>
@@ -47,21 +47,10 @@ const load = () => {
   //   loading.value = false;
   // }, 2000);
 };
-// const modules = import.meta.glob(
-//   "@/assets/img/main_img/**/*.{png,jpg,jpeg,gif}"
-// ); // 指定文件夹和文件类型进行匹配
-// const imgList = Object.keys(modules);
-const obj = import.meta.glob("@/assets/img/main_img/**/*.{png,jpg,jpeg,gif}", {
-  as: "url",
-});
-
-const imagesRef = ref<string[]>([]);
-
-for (const key in obj) {
-  obj[key]().then((res) => {
-    imagesRef.value.push(res);
-  });
-}
+const imgs: any = import.meta.glob(
+  "@/assets/img/main_img/**/*.{png,jpg,jpeg,gif}"
+); // 指定文件夹和文件类型进行匹配
+const imgList = Object.keys(imgs);
 </script>
 
 <style>
