@@ -27,7 +27,7 @@
     </el-row>
   </div> -->
   <div>
-    <img src="./src/assets/img/main_img/1.jpg" alt="" />
+    <img src="src/assets/img/main_img/1.jpg" alt="" />
   </div>
 </template>
 
