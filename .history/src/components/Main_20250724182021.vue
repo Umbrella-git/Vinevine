@@ -51,9 +51,8 @@ const imgs: any = import.meta.glob(
   "@/assets/img/main_img/**/*.{png,jpg,jpeg,gif}"
 ); // 指定文件夹和文件类型进行匹配
 const imgList = Object.keys(imgs).map(
-  // 提取文件名（包括扩展名）
-  (key) => key.match(/([^/]+)\.(png|jpg|jpeg|gif)$/)[0]
-);
+  (key) => key.match(/([^/]+)\.(png|jpg|jpeg)$/)[1]
+); // 提取文件名（不包括扩展名）
 </script>
 
 <style>
