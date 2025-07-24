@@ -12,7 +12,7 @@ export default defineConfig({
       "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
-  base: "./src",
+  base: "./",
   server: {
     proxy: {
       "/api": {
