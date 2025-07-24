@@ -47,10 +47,10 @@ const load = () => {
   //   loading.value = false;
   // }, 2000);
 };
-const imgs = import.meta.glob("@/assets/img/main_img/**/*.{png,jpg,jpeg,gif}"); // 指定文件夹和文件类型进行匹配
-const imgList = Object.keys(imgs).map(
-  (key) => new URL(imgs[key].name, import.meta.url).href
-);
+// const imgs: any = import.meta.glob(
+//   "@/assets/img/main_img/**/*.{png,jpg,jpeg,gif}"
+// ); // 指定文件夹和文件类型进行匹配
+// const imgList = Object.keys(imgs);
 </script>
 
 <style>
