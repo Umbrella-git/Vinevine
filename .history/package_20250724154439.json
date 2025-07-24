@@ -5,11 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "build": "run-p type-check \"build-only {@}\" --",
+    "preview": "vite preview",
     "build-only": "vite build",
-    "type-check": "vue-tsc --build",
-    "build": "vue-tsc && vite build",
-    "build:pro": "vue-tsc && vite build --mode production",
-    "preview": "vite preview"
+    "type-check": "vue-tsc --build"
   },
   "dependencies": {
     "element-plus": "^2.10.4",

@@ -5,10 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    // "build": "run-p type-check \"build-only {@}\" --",
+    // "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --build",
-    "build": "vue-tsc && vite build",
-    "build:pro": "vue-tsc && vite build --mode production",
+    // "dev": "vite --open",
+    "build": "vue-tsc && vite build",  // 开发
+    "build:test": "vue-tsc  && vite build --mode test", // 测试
+    "build:pro": "vue-tsc && vite build --mode production",  // 生产
     "preview": "vite preview"
   },
   "dependencies": {
