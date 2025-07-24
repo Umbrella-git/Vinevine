@@ -3,7 +3,7 @@
     <el-row>
       <el-col :span="24" v-for="url in imgList" :key="url">
         <div class="grid-content">
-          <el-image :key="url" :src="url" fit="fill" lazy />
+          <el-image :key="url" :src="getAssetsFile(url)" fit="fill" lazy />
         </div>
       </el-col>
     </el-row>
@@ -17,15 +17,15 @@
       </el-col>
     </el-row>
   </div>
-  <!-- <div v-if="style == 4">
+  <div v-if="style == 4">
     <el-row :gutter="20">
       <el-col :span="6" v-for="url in imgList" :key="url">
         <div class="grid-content">
-          <el-image :key="url" :src="url" fit="fill" lazy />
+          <el-image :key="url" :src="getAssetsFile(url)" fit="fill" lazy />
         </div>
       </el-col>
     </el-row>
-  </div> -->
+  </div>
 </template>
 
 <script lang="ts" setup>
