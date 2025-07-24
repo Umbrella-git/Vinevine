@@ -9,12 +9,7 @@ export default defineConfig({
   plugins: [vue(), vueDevTools()],
   resolve: {
     alias: {
-      "@": fileURLToPath(
-        new URL(
-          process.env.MODE === "production" ? "/" : "./src",
-          import.meta.url
-        )
-      ),
+      "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
   base: "./",
