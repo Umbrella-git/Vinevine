@@ -1,7 +1,6 @@
 <template>
-  <div>
-    <img src="@/assets/img/main_img/1.jpg" alt="" />
-    <!-- <el-row>
+  <div v-if="style == 1">
+    <el-row>
       <el-col :span="24" v-for="url in imgList" :key="url">
         <div class="grid-content">
           <el-image :key="url" :src="url" fit="fill" lazy />
@@ -25,7 +24,7 @@
           <el-image :key="url" :src="url" fit="fill" lazy />
         </div>
       </el-col>
-    </el-row> -->
+    </el-row>
   </div>
 </template>
 

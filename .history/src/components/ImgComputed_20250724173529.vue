@@ -1,7 +1,6 @@
 <template>
-  <div>
-    <img src="@/assets/img/main_img/1.jpg" alt="" />
-    <!-- <el-row>
+  <div v-if="style == 1">
+    <el-row>
       <el-col :span="24" v-for="url in imgList" :key="url">
         <div class="grid-content">
           <el-image :key="url" :src="url" fit="fill" lazy />
@@ -10,13 +9,14 @@
     </el-row>
   </div>
   <div v-if="style == 2">
-    <el-row>
-      <el-col :span="12" v-for="url in imgList" :key="url">
+    <img src="@/assets/img/main_img/1.jpg" alt="" />
+    <!-- <el-row>
+      <el-col :span="12" v-for="url in imgList1" :key="url">
         <div class="grid-content">
           <el-image :key="url" :src="url" fit="fill" lazy />
         </div>
       </el-col>
-    </el-row>
+    </el-row> -->
   </div>
   <div v-if="style == 4">
     <el-row :gutter="20">
@@ -25,15 +25,16 @@
           <el-image :key="url" :src="url" fit="fill" lazy />
         </div>
       </el-col>
-    </el-row> -->
+    </el-row>
   </div>
 </template>
 
 <script lang="ts" setup>
-// defineProps<{
-//   style: number;
-//   imgList: string[];
-// }>();
+defineProps<{
+  style: number;
+  imgList: string[];
+}>();
+const imgList1 = ["@/assets/img/main_img/1.jpg", "@/assets/img/main_img/1.jpg"];
 </script>
 
 <style scoped>

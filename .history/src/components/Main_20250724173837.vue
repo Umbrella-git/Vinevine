@@ -5,8 +5,7 @@
       class="list"
       :infinite-scroll-disabled="disabled"
     >
-      <ImgComputed />
-      <!-- <li class="list-item">
+      <li class="list-item">
         <ImgComputed :style="2" :imgList="imgList.slice(0, 2)" />
       </li>
       <li class="list-item">
@@ -26,7 +25,7 @@
       </li>
       <li class="list-item">
         <ImgComputed :style="2" :imgList="imgList.slice(16, 18)" />
-      </li> -->
+      </li>
     </ul>
     <p v-if="loading">Loading...</p>
     <p v-if="noMore">No more</p>
