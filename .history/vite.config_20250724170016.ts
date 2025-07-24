@@ -6,7 +6,6 @@ import vueDevTools from "vite-plugin-vue-devtools";
 
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => {
-  const env = loadEnv(mode, process.cwd());
   return {
     plugins: [vue(), vueDevTools()],
     resolve: {
@@ -14,7 +13,7 @@ export default defineConfig(({ mode }) => {
         "@": fileURLToPath(
           new URL(
             // 如果是开发环境则为"./src/",否则为"./"
-            env.VITE_MODE == "development" ? "./src" : "./",
+            "process.env.NODE_ENV" == "development" ? "./src" : "./",
             import.meta.url
           )
         ),
