@@ -12,8 +12,8 @@ export default defineConfig(({ mode }) => {
       alias: {
         "@": fileURLToPath(
           new URL(
-            // 如果是开发环境则为"./src/",否则为"./"
-            mode == "development" ? "./src" : "./",
+            // 如果是生产环境则为"./src/",否则为"./"
+            mode == "production" ? "./dist" : "./src",
             import.meta.url
           )
         ),
