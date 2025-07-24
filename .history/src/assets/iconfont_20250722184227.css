@@ -1,0 +1,19 @@
+@字体类型 {
+    字体系列：“iconfont”；/* 项目 ID 4981526 */
+    src: url('//at.alicdn.com/t/c/font_4981526_y7297rf99b.woff2?t=1753180142984') 格式('woff2'),
+         url('//at.alicdn.com/t/c/font_4981526_y7297rf99b.woff?t=1753180142984') 格式('woff'),
+         url('//at.alicdn.com/t/c/font_4981526_y7297rf99b.ttf?t=1753180142984') 格式('truetype');
+  }
+  
+  .iconfont {
+    字体系列：“iconfont”！重要；
+    字体大小：16px；
+    字体样式：正常；
+    -webkit-字体平滑：抗锯齿；
+    -moz-osx-font-smoothing：灰度；
+  }
+  
+  .icon-zhankaicebianlan:之前{
+    内容：“\e8ba”；
+  }
+  
