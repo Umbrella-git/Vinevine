@@ -1,5 +1,5 @@
 <template>
-  <!-- <div v-if="style == 1">
+  <div v-if="style == 1">
     <el-row>
       <el-col :span="24" v-for="url in imgList" :key="url">
         <div class="grid-content">
@@ -25,9 +25,6 @@
         </div>
       </el-col>
     </el-row>
-  </div> -->
-  <div>
-    <img src="src\assets\img\main_img\1.jpg" alt="" />
   </div>
 </template>
 
