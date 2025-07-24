@@ -11,8 +11,7 @@ export default defineConfig({
     alias: {
       "@": fileURLToPath(
         new URL(
-          // 如果是生产环境则为"./src/",否则为"./"
-          process.env.VITE_MODE == "production" ? "./src/assets" : "./src",
+          import.meta.env.MODE == "production" ? "./" : "./src",
           import.meta.url
         )
       ),
