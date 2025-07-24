@@ -6,9 +6,9 @@
       :infinite-scroll-disabled="disabled"
     >
       <li class="list-item">
-        <ImgComputed />
+        <ImgComputed :style="2" :imgList="imgList.slice(0, 2)" />
       </li>
-      <!-- <li class="list-item">
+      <li class="list-item">
         <ImgComputed :style="4" :imgList="imgList.slice(2, 6)" />
       </li>
       <li class="list-item">
@@ -25,7 +25,7 @@
       </li>
       <li class="list-item">
         <ImgComputed :style="2" :imgList="imgList.slice(16, 18)" />
-      </li> -->
+      </li>
     </ul>
     <p v-if="loading">Loading...</p>
     <p v-if="noMore">No more</p>
@@ -47,10 +47,10 @@ const load = () => {
   //   loading.value = false;
   // }, 2000);
 };
-// const imgs: any = import.meta.glob(
-//   "@/assets/img/main_img/**/*.{png,jpg,jpeg,gif}"
-// ); // 指定文件夹和文件类型进行匹配
-// const imgList = Object.keys(imgs);
+const imgs: any = import.meta.glob(
+  "@/assets/img/main_img/**/*.{png,jpg,jpeg,gif}"
+); // 指定文件夹和文件类型进行匹配
+const imgList = Object.keys(imgs);
 </script>
 
 <style>
