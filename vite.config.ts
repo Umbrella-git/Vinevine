@@ -13,4 +13,13 @@ export default defineConfig({
     },
   },
   base: "./",
+  server: {
+    proxy: {
+      "./": {
+        target: "https://www.vinevine.shop/",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ""),
+      },
+    },
+  },
 });
