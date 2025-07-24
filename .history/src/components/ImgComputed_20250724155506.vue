@@ -27,12 +27,7 @@
     </el-row>
   </div> -->
   <div>
-    <img
-      src="@/assets/img/main_img/1.jpg"
-      alt=""
-      width="100px"
-      height="100px"
-    />
+    <img src="D:\MyJob\Vinevine\src\assets\img\main_img\1.jpg" alt="" />
   </div>
 </template>
 
