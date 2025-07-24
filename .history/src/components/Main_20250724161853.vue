@@ -51,7 +51,7 @@ const imgs: any = import.meta.glob(
   "@/assets/img/main_img/**/*.{png,jpg,jpeg,gif}"
 ); // 指定文件夹和文件类型进行匹配
 const imgList = Object.keys(imgs);
-console.log(import.meta.env.MODE);
+console.log(process.env.MODE);
 </script>
 
 <style>
