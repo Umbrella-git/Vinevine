@@ -10,7 +10,7 @@ export default defineConfig({
     alias: {
       "@": fileURLToPath(
         new URL(
-          process.env.MODE === "Production" ? "./aaa" : "./aaa",
+          process.env.MODE === "Production" ? "./aaa" : "./src",
           import.meta.url
         )
       ),
